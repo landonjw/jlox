@@ -1,0 +1,32 @@
+class Doughnut {
+
+  init() {
+    this.foo = "foo";
+  }
+
+  cook() {
+    print "Fry until golden brown.";
+  }
+}
+
+class BostonCream < Doughnut {
+
+  init() {
+    super.init();
+    this.bar = "bar";
+  }
+
+  cook() {
+    super.cook();
+    print "Pipe full of custard and coat with chocolate.";
+  }
+}
+
+var donut = BostonCream();
+donut.baz = "baz";
+
+BostonCream().cook();
+
+print donut.foo;
+print donut.bar;
+print donut.baz;
